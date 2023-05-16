@@ -2,12 +2,12 @@
 pragma solidity 0.8.18;
 
 contract Voting {
-    mapping(string => address) candidates;
-    mapping(address => uint) votes;
-    mapping(address => bool) voted;
+    mapping(string => address) public candidates;
+    mapping(address => uint) public votes;
+    mapping(address => bool) public voted;
     uint private constant ELECTION_TIME = 3 days;
-    uint startsAt;
-    uint endsAt;
+    uint public startsAt;
+    uint public endsAt;
 
     event Voted(address _voter, string _candidate);
 
