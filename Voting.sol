@@ -6,8 +6,8 @@ contract Voting {
     mapping(address => uint) public votes;
     mapping(address => bool) public voted;
     uint private constant ELECTION_TIME = 3 days;
-    uint public startsAt;
-    uint public endsAt;
+    uint private startsAt;
+    uint private endsAt;
 
     event Voted(address _voter, string _candidate);
 
